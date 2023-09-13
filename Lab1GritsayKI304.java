@@ -2,6 +2,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * Програма для генерації та виведення квадратної матриці з заповнювачами на екран та в файл.
+ * @author Valera
+ * @since 1.0
+ */
 public class Lab1GritsayKI304 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -36,6 +41,13 @@ public class Lab1GritsayKI304 {
         }
     }
 
+    /**
+     * Генерує квадратну матрицю з заповнювачами.
+     *
+     * @param size           Розмір матриці.
+     * @param fillCharacter Символ-заповнювач.
+     * @return Квадратна матриця з заповнювачами.
+     */
     private static char[][] generateMatrix(int size, char fillCharacter) {
         char[][] matrix = new char[size][size];
         for (int i = 0; i < size; i++) {
@@ -50,6 +62,11 @@ public class Lab1GritsayKI304 {
         return matrix;
     }
 
+    /**
+     * Виводить матрицю на екран.
+     *
+     * @param matrix Матриця для виводу.
+     */
     private static void printMatrix(char[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
@@ -59,6 +76,13 @@ public class Lab1GritsayKI304 {
         }
     }
 
+    /**
+     * Записує матрицю у текстовий файл.
+     *
+     * @param matrix Матриця для запису.
+     * @param writer Об'єкт FileWriter для запису у файл.
+     * @throws IOException Викидається в разі помилки при записі у файл.
+     */
     private static void writeMatrixToFile(char[][] matrix, FileWriter writer) throws IOException {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
